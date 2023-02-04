@@ -1,6 +1,4 @@
-// import libs from "@tom/frontend-lib";
-
-import * as libs from "@tom/frontend-lib";
+import * as libs from "@0bipinnata0/frontend-lib";
 
 const version = require("../../package.json").version;
 
@@ -14,7 +12,6 @@ tom-test --version
 
 > throw error
 tom-test
-
 
 */
 const options = process.argv.slice(2);
