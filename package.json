@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "abc": "bin/index.js"
+    "tom-test": "bin/index.js"
   },
   "scripts": {
     "start": "tsc -w"
@@ -13,9 +13,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^18.11.18"
+    "@types/node": "^18.11.18",
+    "typescript": "5.0.0-dev.20230203"
   },
   "dependencies": {
+    "@0bipinnata0/frontend-lib": "^1.0.0",
     "cac": "^6.7.14"
   }
 }

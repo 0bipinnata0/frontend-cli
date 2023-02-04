@@ -1,20 +1,35 @@
-import { cac } from "cac";
+// import libs from "@tom/frontend-lib";
+
+import * as libs from "@tom/frontend-lib";
 
 const version = require("../../package.json").version;
 
-const cli = cac("island").version(version).help();
+/*
+tom-test init
 
-cli
-  .command("[root]", "start dev server")
-  .alias("dev")
-  .action(async (root: string) => {
-    console.log("dev", root);
-  });
+tom-test init --key value
 
-cli
-  .command("build [root]", "build for production")
-  .action(async (root: string) => {
-    console.log("build", root);
-  });
+tom-test --version
 
-cli.parse();
+
+> throw error
+tom-test
+
+
+*/
+const options = process.argv.slice(2);
+const input = options[0];
+if (input === "init") {
+  const [key, value] = options.slice(1);
+  if (key && value) {
+    console.info(libs);
+    libs[input]({ key: key.replace(/--*/g, ""), value });
+  } else {
+    libs[input]();
+  }
+} else if (["version", "V"].includes(input.replace(/--|-*/g, ""))) {
+  console.info(`当前版本是${version}`);
+} else {
+  console.info("不支持的参数");
+}
+

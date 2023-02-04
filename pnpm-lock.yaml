@@ -1,14 +1,18 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@tom/frontend-lib': ^1.0.0
   '@types/node': ^18.11.18
   cac: ^6.7.14
+  typescript: 5.0.0-dev.20230203
 
 dependencies:
+  '@tom/frontend-lib': link:node_modules/@tom/frontend-lib
   cac: 6.7.14
 
 devDependencies:
   '@types/node': 18.11.18
+  typescript: 5.0.0-dev.20230203
 
 packages:
 
@@ -20,3 +24,9 @@ packages:
     resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
     engines: {node: '>=8'}
     dev: false
+
+  /typescript/5.0.0-dev.20230203:
+    resolution: {integrity: sha512-B+UiFUnk+joGpmluibAIauIFWHdmhisuC9GB3BZVNqvOYMPCtg/HokU1P5cxsw/07TesqdWkjAWQqW5kJrm2qA==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
